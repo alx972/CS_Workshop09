@@ -32,9 +32,9 @@ ulong Ackerman(ulong m, ulong n) // функция Аккермана
     {
         return Ackerman (m - 1, 1);
     }
-    return Ackerman(m - 1, Ack(m, n - 1));
+    return Ackerman(m - 1, Ackerman(m, n - 1));
 }
 
 ushort num1 = ValidInt(InputInt("Введите неотрицательное число"));
 ushort num2 = ValidInt(InputInt("Введите ещё одно неотрицательное число"));
-System.Console.WriteLine($"m = {num1}, n = {num2} -> {Ack(num1, num2)}");
+System.Console.WriteLine($"m = {num1}, n = {num2} -> {Ackerman(num1, num2)}");
