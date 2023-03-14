@@ -23,11 +23,11 @@ int InputInt (string msg) // ввод с консоли целого числа
         case (>=0, >=0) when natNum1 > natNum2:
             return (natNum2, natNum1);
         case (>= 0, >= 0) when natNum1 == natNum2:
-            System.Console.WriteLine("ОШИБКА: Числа не должны совпадать.");
+            Console.WriteLine("ОШИБКА: Числа не должны совпадать.");
             Environment.Exit(1);
             return (0, 0);
         default: 
-            System.Console.WriteLine("ОШИБКА: Числа не могут быть отрицательными");
+            Console.WriteLine("ОШИБКА: Числа не могут быть отрицательными");
             Environment.Exit(2);
             return (0, 0);
     }
@@ -37,7 +37,7 @@ void PrintEvenNumbers(int begin, int end) // вывод четных чисел 
 {
     if (begin > end) return;
     if (begin % 2 == 1) begin++;
-    System.Console.Write($"{begin} ");
+    Console.Write($"{begin} ");
     PrintEvenNumbers(begin + 2, end);
 }
 
